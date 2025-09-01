@@ -1,9 +1,9 @@
 //set up runs one time
 
-let bluey 
+let purse 
 
 function preload(){
-    cartoon=loadImage('cartoon.jpeg')
+    purse=loadImage('purse.pdf')
 
 }
 
@@ -57,7 +57,7 @@ function draw() {
   //curve style 
    curve(1173, -1000, 193, 170, -105, 165, -105, -165)
 
-   image(cartoon, 100, 100)
+   image(purse, 100, 100)
 
   
  
