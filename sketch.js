@@ -1,11 +1,11 @@
 //set up runs one time
+let images 
 
-let purse 
 
 function preload(){
-    purse=loadImage('purse.pdf')
-
+  images = loadImage('images.jpeg')
 }
+
 
 function setup() {
   createCanvas(1000, 500);
@@ -19,6 +19,12 @@ function draw() {
   ellipse (400, 250, 450, 500)
   fill (50, 66, 240)
   
+     
+  ellipse(mouseX, mouseY, 100, 100)
+  //line(pmouseX, pmouseY, mouseX, mouseY)
+  //noCursor()
+  
+  
   //ellipse style 
   ellipse (500, 200, 90, 60)
   ellipse (300, 200, 90, 60)
@@ -28,6 +34,8 @@ function draw() {
   ellipse (300, 200, 50, 60)
   fill (240, 184, 180)
     
+    image(images, 700, 200)
+  
   //triangle style
   translate (350, 220)
   triangle (30, 75, 58, 20, 86, 75)
@@ -56,11 +64,17 @@ function draw() {
   
   //curve style 
    curve(1173, -1000, 193, 170, -105, 165, -105, -165)
-
-   image(purse, 100, 100)
+  
+  
+      if(mouseIsPressed == true){
+        fill(30, 190, 40)
+      } else{
+        fill(30, 20, 190)
+      }
+  
+  
 
   
  
 
 }
- 
