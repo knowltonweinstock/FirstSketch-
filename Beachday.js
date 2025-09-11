@@ -1,5 +1,6 @@
-let ellipseBrushBool = false;
-let squareBrushBool = false;
+let beachBool = false
+let snowBool = false
+let rainBool = false
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -8,44 +9,93 @@ function setup() {
   textSize(20);
 }
 
-function draw() {
-  fill(0);
-  text("Beach Day", 100, 100);
+
+function setup(){
+  createCanvas(windowWidth, windowHeight)
+  background(255)
+  
 }
 
-// draw while dragging
-function mouseDragged() {
-  if (ellipseBrushBool) {
-    ellipseBrush();
-  } else if (squareBrushBool) {
-    squareBrush();
-  }
-}
 
-function ellipseBrush() {
-  fill(237, 237, 159);
-  ellipse(mouseX, mouseY, 50, 50);   
-}
+function draw(){
+  fill(0)
+  textSize(20)
+  text("Press b for beach, press s for snow, press r for rain", 100, 100)
 
-function squareBrush() {    
-  fill(31, 51, 204);
-  rect(mouseX, mouseY, 100, 100);
-}
-
-function keyPressed() {
-  if (key === 'e') {
-    ellipseBrushBool = true;
-    squareBrushBool = false;
+  //if beach is true draw day function
+  if(beachBool == true){
+    
+      beachScene()
+    
   }
 
-  if (key === 's') {
-    ellipseBrushBool = false;
-    squareBrushBool = true;
+  //if snow is true draw snow function
+  if(snowBool == true){
+    
+      snowScene()
+    
   }
+  
+   //if rain is true draw snow function
+  if(rainBool == true){
+    
+      rainScene()
+    }
 }
 
-if(mouseIsPressed == true){
-	background(255);
-	} else {
-	background(0, 0, 255);
-}	
+
+//pretend that these are individual sketches/drawings/scenes and
+//you're flipping between them
+
+
+function beachScene(){
+  //add as much as you want to this function!
+  background(20, 89, 199)
+  fill(227, 195, 89)
+  ellipse(windowWidth/2, windowHeight/2, 200, 200)
+}
+
+function snowScene(){
+  //add as much as you want to this function!
+  background(175, 200, 240)
+  fill(245, 246, 247)
+  ellipse(windowWidth/2, windowHeight/3, 200, 200)
+
+}
+
+function rainScene(){
+  //add as much as you want to this function!
+  background(76, 85, 99)
+  fill(10, 21, 38)
+  ellipse(windowWidth/2, windowHeight/3, 200, 200)
+
+}
+
+function keyPressed(){
+  //pressing s flips day to true and night to false
+  if(key === 'b'){
+    beachBool = true
+    snowBool = false
+    rainBool = false
+  
+  }
+  //pressing b flips night to true and day to false
+  if(key === 's'){
+    beachBool = false
+    snowBool = true
+    rainBool = false
+    
+  }
+
+  //pressing r flips night to true and day to false
+  if(key === 'r'){
+    beachBool = false
+    snowBool = false
+    rainBool = true
+
+  }
+
+
+}
+
+
