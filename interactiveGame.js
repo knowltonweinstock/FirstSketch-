@@ -35,6 +35,7 @@ function preload(){
 	candyCorn = loadImage('halloweenCandy.png')
 	pinkCandy = loadImage('pinkCandy.jpg')
 	purpleCandy = loadImage('purpleCandy.jpg')
+	candyLand = loadImage('candyLand.jpg')
 }
 
 
@@ -62,7 +63,8 @@ function draw(){
 
 function game(){
 
-	background(255)
+	background('candyland.jpg')
+	candyLand = loadImage('candyLand.jpg')
 	textSize(30)
 
 	text(score, 10, 100)
