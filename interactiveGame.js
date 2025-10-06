@@ -83,7 +83,7 @@ function game(){
 
 	fill(255)
 	noStroke()
-	rect(45, 30, 300, 80)
+	rect(45, 30, 300, 120)
 	fill(0)
 	text('Collect 30 Candies!', 50, 70)
 	text(score, 50, 100)
